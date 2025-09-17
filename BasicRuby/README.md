@@ -218,3 +218,30 @@ Ruby Variables
 >Should always think of good name for your variable even if you name it anything you should not ! And name it accordingly to the value inside the future you will thank you ! <br> <br>
 >**`Another thing to remember in ruby you should always name your variable in snake_case if you have multiple words that is the ruby way !`**
 ---
+<h1 align = "center">
+Ruby Input and Output
+</h1>
+
+>---
+>
+>## What are the two methods we can use to output data to the user’s screen?
+>
+>The two method are **`puts and print`** but there is also **`p`** which can be used for debugging and show a more raw version of the object.
+>
+>## What is similar between these two output methods?
+>
+>They both use the method to_s to transform the output into string even if that string is empty
+>
+>## What is different between these two output methods?
+>
+>They have difference in the way they treat array print show array as they are and puts show each element of the array in a new line. Also print put output all into inline and puts into a newline
+>
+>## What is the method you can use to get input from the user?
+>
+>You can use gets to get a input from the user but you will get the newline so you should use gets.chomp to remove all trailing characters if you do not want them.
+>
+>## What is at least one difference between the output and input methods?
+>
+>Unlike the output method puts and print gets does return the value the user input. Puts and print do not return the value they show and return nil which is important to understand !
+>
+>---
