@@ -2,19 +2,21 @@
 Ruby Basic Data Types
 </h1>
 
+>---
+>
 >## What are the basic arithmetics operators you can use on numbers ?
 >
->>1. Addition : `+`
->>2. Subtraction : `-`
->>3. Multiplication : `*`
->>4. Division : `/`
->>5. Exponent : `**`
->>6. Modulo(Reminder of a division) : `%`
+>>1. Addition : **`+`**
+>>2. Subtraction : **`-`**
+>>3. Multiplication : **`*`**
+>>4. Division : **`/`**
+>>5. Exponent : **`**`**
+>>6. Modulo(Reminder of a division) : **`%`**
 >
 >## What are the difference between an integer and a float ?
 >
 >An integer cannot have decimal and always a whole number example:
->>`Float : 2.50` <br> `Integer : 3`
+>>**`Float : 2.50` <br> `Integer : 3`**
 >
 >## What method would you use to convert a float to an integer?
 >
@@ -38,7 +40,7 @@ Ruby Basic Data Types
 >
 >## What are the differences between single and double quotes?
 >
->The difference between single and double quotes is their usage and limitation **the single quotes cannot escape character and interpolate string.**
+>The difference between single and double quotes is their usage and limitation **`the single quotes cannot escape character and interpolate string`.**`
 >
 >## What is string interpolation?
 >
@@ -126,7 +128,7 @@ Ruby Basic Data Types
 >
 >The syntax for creating a symbol is a colon at first then the name of your symbol example:
 >
->`my_symbol`
+>**`my_symbol`**
 >
 >
 >## What’s the difference between a symbol and a string?
@@ -139,9 +141,80 @@ Ruby Basic Data Types
 >True represent a truthy value and can be used to check some condition
 >
 >## What does false represent?
+>
 >False represent a falsy value and can be used to check some condition
 >
 >## What does nil represent?
 >
 >Nil represent the lack of value or empty or null it can be used to check if something is empty or lack value
+---
+
+<h1 align = "center">
+Ruby Variables
+</h1>
+
+>---
+>
+>## What is a variable?
+>
+>A variable is a name for a type of storage you can store any type of data inside the variable.
+> variable can be named anything and is not representative of the content inside of the variable.
+>
+>## How do you assign a value or an expression to a variable?
+>
+>**`name = "Bob" #=>string`** <br>
+>**`number = 1 #=>Integer`** <br>
+>**`decimal_number = 1.50 #=>Float`** <br>
+>**`can_program = false #=>Booleans`**
+>
+>
+>## What does the += assignment operator do?
+>
+>The assignment perform an operation on the original value and reassign this value in this it add the value so example:
+>
+>>``` ruby
+>>irb(main):001> number = 5
+>>=> 5
+>>irb(main):002> number = number + 5
+>>=> 10
+>>irb(main):003> number = 5
+>>=> 5
+>>irb(main):004> number += 5
+>>=> 10
+>
+>So the it's the same result but you should use the shorthand to gain time and make your code clean
+>
+>## What does the -= assignment operator do?
+>
+>Same as above but subtract instead of addition
+>
+>## What does the *= assignment operator do?
+>
+>Same as above but multiply instead of subtract
+>
+>## What does the /= assignment operator do?
+>
+>Same as above but divide instead of multiply
+>
+>## What are variable naming conventions ?
+>
+>Your variable should **always** have meaningful name that reflect what stored inside and not random name like a for string or number per example :
+>
+>### Bad naming conventions
+>>
+>>**`a = 1`**<br>
+>>**`number = "John"`**<br>
+>>**`c = true`**
+>
+>Those mean nothing ! and will lose the developer after some month or years if they come back to the program and they will have difficulty understanding what variable is used for what. If you named your variable correctly by using good naming convention you will not lose time and your program and code will be more clean and comprehensible
+>
+>### Good naming convention
+>
+>>**`First_name = "Bob"`** <br>
+>>**`Number = 5`**<br>
+>>**`Can_swim = true`**<br>
+>>**`age = 25`** <br>
+>
+>Should always think of good name for your variable even if you name it anything you should not ! And name it accordingly to the value inside the future you will thank you ! <br> <br>
+>**`Another thing to remember in ruby you should always name your variable in snake_case if you have multiple words that is the ruby way !`**
 ---
