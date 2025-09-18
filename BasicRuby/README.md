@@ -245,3 +245,78 @@ Ruby Input and Output
 >Unlike the output method puts and print gets does return the value the user input. Puts and print do not return the value they show and return nil which is important to understand !
 >
 >---
+<h1 align = "center">
+Ruby Conditional Logic
+</h1>
+
+>---
+>
+>## What is a Boolean?
+>
+>A boolean can is a an expression that can be **`true`** or **`false`**
+>
+>## What are “truthy” values?
+>
+>All values in ruby except **`nil`** and **`false`** are truthy values
+>per example that why we can do :
+>>
+>>``` ruby
+>>irb(main):006* if x
+>>irb(main):007*   puts "you are true !"
+>>irb(main):008* else
+>>irb(main):009*   puts "you are false !"
+>>irb(main):010> end
+>
+>It execute the "you are true because x is a truthy value"
+>
+>## Are the following considered true or false: nil, 0, "0", "", 1, [], {} and -1?
+>>
+>>### All value are true in ruby except nil and false
+>>
+>>1. **`nil = false`**
+>>2. **`0 = true`**
+>>3. **`"0" = true`**
+>>4. **`"" = true`**
+>>5. **`1 = true`**
+>>6. **`[] = true`**
+>>7. **`{} = true`**
+>>8. **`-1 = true`**
+>
+>## When do you use elsif?
+>
+> When the we want to check if multiple condition are true
+>
+>## When do you use unless?
+>
+>We use unless when we want to do the inverse of if so when you want to execute a condition that evaluate to false
+>
+>## What do || and && and ! do?
+>
+>The ||(OR) and &&(AND) can be used to add more than one condition even if they evaluate the code differently && need both expression to equal to true or it will return false and || need only one expression to return true to make the whole expression return true.
+>
+>For the ! it will return the opposite example: <br>
+>**!false will return true and !!false will return false again because it became true then became false again**
+>
+>## What is short circuit evaluation?
+>
+>A short circuit evaluation is when per example when using || it will check the first expression which is equal to true and if that the first one then it will not check the other expression because if the first is one ls already true then the whole expression become true
+>
+>## What is returned by puts("woah") || true?
+>
+>It will put the value woah and return nil because the first expression is executed first because it's truth so the second expression is never checked
+>
+>## What is the ternary operator?
+>
+>The ternary operator is a way to write a simple if...else statement that can be in one line and need to have only two condition example:
+>
+>>```ruby
+>>irb(main):073> can_swim = true
+>>=> true
+>>irb(main):074> can_swim == true ? "Wow you are a good swimmer" : "You cannot swim yet"
+>>=> "Wow you are a good swimmer"
+>
+>## When should you use a case statement?
+>
+>You should use case statement when your if is becoming more complicated than needed per example many multi level if rethink your strategy and maybe think of using case in that case to simplify your code and making it more readable.
+>
+>---
