@@ -3,7 +3,7 @@
 # (32 * 4) >= 129 # Return false because 32 * 4 = 128 which is lesser than 129
 # false != !true #Return false
 # true == 4 #return false because not the same type of data and content of value
-# false == (847 == '847') #return true because we first evaluate the equal on parathensis which will give us false because "847" is not equal to 847 then we will be looking at false which wil say false is equal to false which is true
+# false == (847 == '847') #return true because we first evaluate the equal on parenthesis which will give us false because "847" is not equal to 847 then we will be looking at false which wil say false is equal to false which is true
 # (!true || (!(100 / 5) == 20) || ((328 / 4) == 82)) || false
 # Return true if one expression when using || operator is true then the entire expression will return true
 #
