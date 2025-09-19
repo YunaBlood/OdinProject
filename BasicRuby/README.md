@@ -322,7 +322,7 @@ Ruby Conditional Logic
 >---
 
 <h1 align = "center">
-Ruby Basic Data Types
+Ruby Loops
 </h1>
 
 >---
