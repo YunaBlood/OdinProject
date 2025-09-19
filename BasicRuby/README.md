@@ -411,3 +411,84 @@ Ruby Loops
 >>irb(main):008> 10.downto(5) { |num| print "#{num} " }
 >
 >---
+>
+
+<h1 align = "center">
+Ruby Arrays
+</h1>
+
+>---
+>
+>## What is an array and why is it useful?
+>
+>An array is useful to not create hundred of variable in your script. Because it can store all type of data type: string,number,array etc... it can replace variable and make the code a lot more readable and clean.
+>
+>It's useful to manipulate the data a lot more easy than to take hundred of variable and manipulate each individually would be hard and really bad for the code and for your time.
+>
+>>```Ruby
+>>Per example here an array compared to some variable:
+>>irb(main):001> a = 1
+>>=> 1
+>>irb(main):002> b = 2
+>>=> 2
+>>irb(main):003> c = 3
+>>=> 3
+>>irb(main):004> numbers = [1,2,3]
+>>=> [1, 2, 3]
+>
+>See we can use an array instead of 3 variable it's easier to manipulate and easier to keep track of.
+>
+>## What are two ways to create a new empty array?
+>
+>The two method to create an empty array are:
+>
+>>```ruby
+>>irb(main):005> Array.new()
+>>=> []
+>>irb(main):006> array = []
+>>=> []
+>
+>## What are some ways of accessing the elements in an array?
+>
+>There are many ways to access elements in an array we can use the index of the element or first, last and many other methods.
+>Example:
+>
+>>```Ruby
+>>irb(main):008> numbers[1]
+>>=> 2
+>>irb(main):009> numbers.last
+>>=> 3
+>>irb(main):010> numbers.first
+>>=> 1
+>
+>
+>## What are 3 ways to add data to an array?
+>
+>The 3 method to add data to an array are :
+>
+>>```ruby
+>>irb(main):011> numbers << 4
+>>=> [1, 2, 3, 4]
+>>irb(main):012> numbers.unshift(0)
+>>=> [0, 1, 2, 3, 4]
+>>irb(main):013> numbers.push(5)
+>>=> [0, 1, 2, 3, 4, 5]
+>
+>>1. **`numbers << 4`** use the shovel operator add the element at the end of the array
+>>2. **`numbers.unshift(0)`** place the element on the beginning of the array
+>>3. **`numbers.push(5)`** place the element at the end of the array
+>
+>
+>
+>## How can you remove elements from an array?
+>
+>There are many method to remove elements from an array
+>
+>1. Delete will remove all instance of the element per example if there are 2 cat in the array it will remove all cat in the array.
+>2. Delete_at will remove the element at the index.
+>3. pop will remove the element at the end of the array.
+>4. shift will remove element at the beginning of the array.
+>5. uniq will remove all duplicate in an array.
+>6. clear will remove all element from an array leaving an empty array.
+>
+>---
