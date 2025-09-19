@@ -333,7 +333,7 @@ Ruby Loops
 >
 >## What is a loop loop, and how would you use it?
 >
->A loop loop is the most basic kind of loop that loop infinitely but there is still some particularity to this loop we can do/while with it and also need to add the break with the condition to break the loop or it's will never stop <br>
+>A loop loop is the most basic kind of loop that loop infinitely but there is still some particularity to this loop we can do/while with it and also need to add the break with the condition to break the loop or it will never stop <br>
 >>
 >>``` ruby
 >>Example on a loop that increment of 1 a counter and break when reaching 10:
@@ -484,8 +484,8 @@ Ruby Arrays
 >
 >There are many method to remove elements from an array
 >
->1. Delete will remove all instance of the element per example if there are 2 cat in the array it will remove all cat in the array.
->2. Delete_at will remove the element at the index.
+>1. delete will remove all instance of the element per example if there are 2 cat in the array it will remove all cat in the array.
+>2. delete_at will remove the element at the index.
 >3. pop will remove the element at the end of the array.
 >4. shift will remove element at the beginning of the array.
 >5. uniq will remove all duplicate in an array.
