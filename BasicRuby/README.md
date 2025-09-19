@@ -320,3 +320,94 @@ Ruby Conditional Logic
 >You should use case statement when your if is becoming more complicated than needed per example many multi level if rethink your strategy and maybe think of using case in that case to simplify your code and making it more readable.
 >
 >---
+
+<h1 align = "center">
+Ruby Basic Data Types
+</h1>
+
+>---
+>
+>## What is a loop and why is it useful?
+>
+>A loop is a piece of code that loop the content depending on the condition and is useful to not rewrite many times the same code and make it clear that this code repeat itself until the condition is false or true.
+>
+>## What is a loop loop, and how would you use it?
+>
+>A loop loop is the most basic kind of loop that loop infinitely but there is still some particularity to this loop we can do/while with it and also need to add the break with the condition to break the loop or it's will never stop <br>
+>>
+>>``` ruby
+>>Example on a loop that increment of 1 a counter and break when reaching 10:
+>>
+>>irb(main):001> x = 0
+>>irb(main):002* loop do
+>>irb(main):003*   puts "number is #{x}"
+>>irb(main):004*   x +=1
+>>irb(main):005*   break if x > 10
+>>irb(main):006> end
+>
+>## What is a while loop, and how would you use it?
+>
+>A while loop is a loop that will execute itself if the condition is true and finish when the condition become false
+>
+>>```ruby
+>>Example same type of loop as above:
+>>
+>>irb(main):010* while x < 10 do
+>>irb(main):011*   puts "x is #{x}"
+>>irb(main):012*   x += 1
+>>irb(main):013> end
+>
+>## What is a for loop, and how would you use it?
+>
+>A for loop is a loop that is used to iterate trough a collection like an array,range,hash and other collection with definite end.
+>They are useful if you need to do something a number of times
+>
+>>``` ruby
+>>Example:
+>>
+>>irb(main):017> array_number = [1,2,3,4,5]
+>>irb(main):018* for i in array_number
+>>irb(main):019*   puts "#{i} monster is coming !"
+>>irb(main):020> end
+>
+>## What is a #times loop, and how would you use it?
+>
+>A times loop is a loop that will loop only a number of times.
+>
+>>``` ruby
+>>Example:
+>>
+>>irb(main):026> count = 0
+>>irb(main):027* 5.times do
+>>irb(main):028*   puts "the count is #{count}"
+>>irb(main):029*   count += 1
+>>irb(main):030> end
+>
+>## What is an until loop, and how would you use it?
+>
+>A until loop is the inverse of a while loop and will be looping if the condition is false and will stop when the condition is true.
+>Until loop should be used when the condition is false for easy reading of code and clean code instead of other loop
+>>
+>>``` Ruby
+>>Example:
+>>
+>>irb(main):025* until can_swim == "false" do
+>>irb(main):026*   puts "Can you swim ? #{can_swim}"
+>>irb(main):027*   can_swim = gets.chomp.to_s
+>>irb(main):028> end
+>
+>
+>## What are the #upto and #downto loops, and how would you use them?
+>
+>
+>The loops upto and downto are both useful to increased a counter and decrease a value per example. They are static loop that will be executed a number of time defined
+>Iterate trough a series of number or letter
+>
+>>``` Ruby
+>>Example upto:
+>>irb(main):006> 5.upto(10) { |num| print "#{num} " }
+>>
+>>Example downto:
+>>irb(main):008> 10.downto(5) { |num| print "#{num} " }
+>
+>---
