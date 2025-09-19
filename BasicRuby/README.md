@@ -492,3 +492,110 @@ Ruby Arrays
 >6. clear will remove all element from an array leaving an empty array.
 >
 >---
+<h1 align = "center">
+Ruby Hash
+</h1>
+
+>---
+>
+>## What are the differences between hashes and arrays?
+>
+>The difference between a hash and a arrays are the fact that an arrays is ordered all the time and is stuck with the index
+>
+>Compared to the hash which can choose any key and get the value corresponding it's really different
+>
+>The fact is array are indexed and cannot change that.
+>
+>## What are keys and values in a hash?
+>
+>Inside a hash the key pointing at the values per example the cat hash would have inside the key name: "Whiskers" per example the key is name and the value so the actual name itself is whiskers
+>
+>>```ruby
+>>irb(main):001> cat = {name: "Whiskers"}
+>>=> {name: "Whiskers"}
+>
+>## How can you create a new hash?
+>
+>You need to use the bracket to create a new hash
+>
+>Many ways can be used per example:
+>
+>>```ruby
+>>irb(main):002> hash = {}
+>>=> {}
+>>irb(main):003> Hash.new
+>
+>## How can you populate a hash with data?
+>
+>To add data to our hash let's take an example simple like our cat hash per example:
+>
+>>```ruby
+>>irb(main):013> cat
+>>=> {name: "Whiskers"}
+>>irb(main):014> cat[:weight] = "5kg"
+>>=> "5kg"
+>>irb(main):015> cat
+>>=> {name: "Whiskers", weight: "5kg"}
+>
+>## How can you change existing values within a hash?
+>
+>Let's do the same as above and change the name of our cat by accessing the data and changing the name to "snow" let's break it down
+>
+>1. First we check our hash
+>2. Then we want to modify the name so we say **`cat[:name] = "Snow"`** we access :name and reassigned the name to the string "Snow"
+>3. Now to check if that work we recheck our hash
+>
+>>```ruby
+>>irb(main):016> cat
+>>=> {name: "Whiskers", weight: "5kg"}
+>>irb(main):017> cat[:name] = "Snow"
+>>=> "Snow"
+>>irb(main):018> cat
+>>=> {name: "Snow", weight: "5kg"}
+>
+>
+>## How can you delete existing data from a hash?
+>
+>Let's delete the key symbol weight for the example
+>
+>We can use name_of_hash.delete(key to delete)
+>
+>So per example:
+>
+>>```ruby
+>>irb(main):023> cat
+>>=> {name: "Snow", weight: "5kg"}
+>>irb(main):024> cat.delete(:weight)
+>>=> "5kg"
+>>irb(main):025> cat
+>>=> {name: "Snow"}
+>
+>## How can you merge two hashes together?
+>
+>We can merge together by using merge it's not a destructive method compared to merge!
+>
+>So self is not modified
+>
+>Per example:
+>
+>>```ruby
+>>irb(main):026> weight = {weight: "5kg"}
+>>=> {weight: "5kg"}
+>>irb(main):027> cat
+>>=> {name: "Snow"}
+>>irb(main):028> cat.merge(weight)
+>>=> {name: "Snow", weight: "5kg"}
+>>irb(main):029> cat
+>>=> {name: "Snow"}
+>>irb(main):030> weight
+>>=> {weight: "5kg"}
+>
+>As we can see the two original hash didn't change and if we want to keep our merged hash we need to store it in a variable or mutate self
+>
+>## Why is it preferred to use symbols as hash keys?
+>
+>It's preferred because in the wild you will see it a lot and it's a lot better compared to the hash rocket. If you can use symbol use it because the syntax is a lot better to read and to understand.
+>
+>It make a clean syntax and it's a lot more performant then strings for all this reason symbol are preferred when using hash keys.
+>
+>---
