@@ -1,25 +1,27 @@
-#Define array of substring as dictionary to check
-#Define method substring with word and dictionary as argument
-#Make the word cases insensitive
-#Pass the dictionary into chars to make it an array of character
-#
-#make a select to check if word is included inside dictionary
-#if yes create an array with that dictionary name and with how many time you find it inside.
-#display the result key(included inside directory) and value(count)
-
-#Create a substring that take a word and check if that word character is inside the dictionary and if yes give that string the count of it found in the word
-#
-
+#Declare the dictionary
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
+#Declare method substrings
 def substrings(word, dictionary)
 
+#Render word case insensitive.
 word = word.downcase
 
-dictionary = dictionary.join.chars
+#Create hash empty
+hash_result = {}
 
 
+#Iterate on all element of the dictionary
+dictionary.each do |char|
+  #Count char in the word and check if special char and downcase
+  count = word.scan(char.downcase).length
 
+  #Add to hash the character if found and add count to the number of time the word is found and if it's not 0
+  #Downcase the word
+  hash_result[char.downcase] = count if count > 0
+end
+#Return result
+ hash_result
 end
 
-substrings("Howdy partner, sit down! How's it going?", dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
