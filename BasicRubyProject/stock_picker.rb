@@ -1,4 +1,10 @@
-def gets_buy_days(array)
+def stock_picker(array)
+  result = calculate_best_trade(array)
+  profit, buy_day, sell_day = result
+  display_result(profit,buy_day,sell_day)
+end
+
+def calculate_best_trade(array)
     best_profit = 0
     profit = 0
     best_buy_day = nil
@@ -16,17 +22,19 @@ def gets_buy_days(array)
                 best_buy_day = buy_days
                 best_sell_day = sell_days
             end
-
         end
     end
-    if best_profit > 0
-        puts "Profit total: #{best_profit}"
-        puts "Best days to buy and sell are: [#{best_buy_day},#{best_sell_day}]"
-    else
-        puts "No profit possible !"
-        best_profit = nil
-    end
-
+    [best_profit,best_buy_day,best_sell_day]
 end
 
-gets_buy_days([17,3,6,9,15,8,6,1,10])
+def display_result(profit,buy_days,sell_days)
+    if profit > 0
+        puts "Profit total: #{profit}"
+        puts "Best days to buy and sell are: [#{buy_days},#{sell_days}]"
+    else
+        puts "No profit possible !"
+        profit = nil
+    end
+end
+
+stock_picker([17,3,6,9,15,8,6,1,10])
