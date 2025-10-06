@@ -1,12 +1,10 @@
 def gets_buy_days(array)
     best_profit = 0
     profit = 0
-    best_buy_day = []
-    best_sell_day = []
+    best_buy_day = nil
+    best_sell_day = nil
     array.each_with_index do |buy_value,buy_days|
         array.each_with_index do |sell_value,sell_days|
-            # puts "buy_days of array is #{buy_days} value of array is #{buy_value}"
-            # puts "sell_days of array is #{sell_days} value of array is #{sell_value}"
             if sell_days <= buy_days
                 next
             else
@@ -21,8 +19,14 @@ def gets_buy_days(array)
 
         end
     end
-    puts "Profit total: #{best_profit}"
-    puts "Best days to buy and sell are: [#{best_buy_day},#{best_sell_day}]"
+    if best_profit > 0
+        puts "Profit total: #{best_profit}"
+        puts "Best days to buy and sell are: [#{best_buy_day},#{best_sell_day}]"
+    else
+        puts "No profit possible !"
+        best_profit = nil
+    end
+
 end
 
 gets_buy_days([17,3,6,9,15,8,6,1,10])
