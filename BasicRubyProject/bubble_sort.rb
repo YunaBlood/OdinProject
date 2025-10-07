@@ -15,13 +15,15 @@ def bubble_sort(array)
   until sorted == true
     sorted = true
     for i in 0...(array.length - 1)
+      left = array[i]
+      right = array[i + 1]
       if array[i] > array[i + 1]
         array[i], array[i + 1] = array[i + 1], array[i]
         sorted = false
-        p "Array index is: #{array[i]} and second index to check is: #{array[i+ 1]}"
+        p "Array index is: #{array[i]} and second index to check is: #{array[i + 1]}"
         p "Array number are swapped"
       else
-        p "Array index is: #{array[i]} and second index to check is: #{array[i+ 1]}"
+        p "Array index is: #{array[i]} and second index to check is: #{array[i + 1]}"
         p "Array number not swapped"
       end
     end
