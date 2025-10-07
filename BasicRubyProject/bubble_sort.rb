@@ -30,13 +30,11 @@ def bubble_sort(array)
       end
     end
   end
-  if count > 0
     puts "Array before sorting #{original_array}"
     puts "Array after sorting #{array}"
     puts "Number of iteration to sort the array: #{count}"
     puts "Array is sorted? sorted = #{sorted}"
     array
-  end
 end
 
 bubble_sort([4,3,78,2,0,2])
