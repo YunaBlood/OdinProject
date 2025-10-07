@@ -10,4 +10,23 @@
 #Additional add number of iteration and edge cases
 
 
+def bubble_sort(array)
+  sorted = false
+  until sorted == true
+    sorted = true
+    for i in 0...(array.length - 1)
+      if array[i] > array[i + 1]
+        array[i], array[i + 1] = array[i + 1], array[i]
+        sorted = false
+        p "Array index is: #{array[i]} and second index to check is: #{array[i+ 1]}"
+        p "Array number are swapped"
+      else
+        p "Array index is: #{array[i]} and second index to check is: #{array[i+ 1]}"
+        p "Array number not swapped"
+      end
+    end
+  end
+  array
+end
 
+bubble_sort([4,3,78,2,0,2])
