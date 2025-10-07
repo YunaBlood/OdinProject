@@ -17,14 +17,13 @@ def bubble_sort(array)
     for i in 0...(array.length - 1)
       left = array[i]
       right = array[i + 1]
-      if array[i] > array[i + 1]
-        array[i], array[i + 1] = array[i + 1], array[i]
+      p "Comparing: #{left} and #{right}"
+      if left > right
+        array[i], array[i + 1] = right, left
         sorted = false
-        p "Array index is: #{array[i]} and second index to check is: #{array[i + 1]}"
-        p "Array number are swapped"
+        p  "Swapped: #{left} and #{right}"
       else
-        p "Array index is: #{array[i]} and second index to check is: #{array[i + 1]}"
-        p "Array number not swapped"
+        p "No swap needed"
       end
     end
   end
