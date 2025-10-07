@@ -11,7 +11,10 @@
 
 
 def bubble_sort(array)
+  original_array = array
   sorted = false
+  count = 0
+  puts "Array before sorting #{original_array}"
   until sorted == true
     sorted = true
     for i in 0...(array.length - 1)
@@ -21,12 +24,16 @@ def bubble_sort(array)
       if left > right
         array[i], array[i + 1] = right, left
         sorted = false
+        count += 1
         p  "Swapped: #{left} and #{right}"
       else
         p "No swap needed"
       end
     end
   end
+  puts "Array after sorting #{array}"
+  puts "Number of iteration to sort the array: #{count}"
+  puts "Array is sorted? sorted = #{sorted}"
   array
 end
 
