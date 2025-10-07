@@ -20,13 +20,13 @@ def bubble_sort(array)
     for i in 0...(array.length - 1)
       left = array[i]
       right = array[i + 1]
-      p "Comparing: #{left} and #{right}"
+      puts "Comparing: #{left} and #{right}"
       if left > right
         array[i], array[i + 1] = right, left
         sorted = false
-        p  "Swapped: #{left} and #{right}"
+        puts  "Swapped: #{left} and #{right}"
       else
-        p "No swap needed"
+        puts "No swap needed"
       end
     end
   end
