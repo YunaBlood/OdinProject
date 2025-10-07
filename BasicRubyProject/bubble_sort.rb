@@ -11,12 +11,12 @@
 
 
 def bubble_sort(array)
-  original_array = array
+  original_array = array.dup
   sorted = false
   count = 0
-  puts "Array before sorting #{original_array}"
   until sorted == true
     sorted = true
+    count += 1
     for i in 0...(array.length - 1)
       left = array[i]
       right = array[i + 1]
@@ -24,17 +24,19 @@ def bubble_sort(array)
       if left > right
         array[i], array[i + 1] = right, left
         sorted = false
-        count += 1
         p  "Swapped: #{left} and #{right}"
       else
         p "No swap needed"
       end
     end
   end
-  puts "Array after sorting #{array}"
-  puts "Number of iteration to sort the array: #{count}"
-  puts "Array is sorted? sorted = #{sorted}"
-  array
+  if count > 0
+    puts "Array before sorting #{original_array}"
+    puts "Array after sorting #{array}"
+    puts "Number of iteration to sort the array: #{count}"
+    puts "Array is sorted? sorted = #{sorted}"
+    array
+  end
 end
 
 bubble_sort([4,3,78,2,0,2])
